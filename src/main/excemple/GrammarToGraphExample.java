@@ -1,6 +1,6 @@
 package main.excemple;
 
-import main.GrammarToGraph.view.MainView;
+import main.GrammarAndGraphTransform.view.MainView;
 
 /**
  * @author dmrfcoder
