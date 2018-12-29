@@ -1,4 +1,5 @@
 import main.excemple.GrammarToGraphExample;
+import main.excemple.SlrExcemple;
 
 /**
  * @author dmrfcoder
@@ -6,7 +7,8 @@ import main.excemple.GrammarToGraphExample;
  */
 public class APP {
     public static void main(String[] args) {
-        GrammarToGraphExample grammarToGraphExample = new GrammarToGraphExample();
-        grammarToGraphExample.runGrammarToGraph();
+        SlrExcemple slrExcemple=new SlrExcemple();
+        slrExcemple.runSleExceple();
+
     }
 }

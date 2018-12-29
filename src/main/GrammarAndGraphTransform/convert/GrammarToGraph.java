@@ -56,34 +56,36 @@ public class GrammarToGraph extends BaseConvertGrammarToGraph {
      */
     private void leftGrammarAddEdges(String endNode, String[] split) throws GrammarPhaseException {
 
-        List<Edge> edges = new ArrayList<>();
+        leftGraph.addEdge(new Node("S0", NodeType.startNode), new Node("S1"), "E");
 
-        for (String item : split) {
-            if (item.length() == 1) {
-                char itemZero = item.charAt(0);
-                if (isInt(itemZero)) {
-
-                    leftGraph.addEdge(new Node(Constant.startNodeName, NodeType.startNode), endNode, String.valueOf(itemZero));
-                } else {
-
-                    throw new GrammarPhaseException(item + "格式非法！");
-                }
-
-
-            } else if (item.length() == 2) {
-                char itemZero = item.charAt(0);
-                char itemFirst = item.charAt(1);
-
-                if (isChar(itemZero) && isInt(itemFirst)) {
-                    leftGraph.addEdge(String.valueOf(itemZero), endNode, String.valueOf(itemFirst));
-                } else {
-                    throw new GrammarPhaseException(item + "不是合法的左文法表达式！");
-
-                }
-
-
-            }
-        }
+//        List<Edge> edges = new ArrayList<>();
+//
+//        for (String item : split) {
+//            if (item.length() == 1) {
+//                char itemZero = item.charAt(0);
+//                if (isInt(itemZero)) {
+//
+//                    leftGraph.addEdge(new Node(Constant.startNodeName, NodeType.startNode), endNode, String.valueOf(itemZero));
+//                } else {
+//
+//                    throw new GrammarPhaseException(item + "格式非法！");
+//                }
+//
+//
+//            } else if (item.length() == 2) {
+//                char itemZero = item.charAt(0);
+//                char itemFirst = item.charAt(1);
+//
+//                if (isChar(itemZero) && isInt(itemFirst)) {
+//                    leftGraph.addEdge(String.valueOf(itemZero), endNode, String.valueOf(itemFirst));
+//                } else {
+//                    throw new GrammarPhaseException(item + "不是合法的左文法表达式！");
+//
+//                }
+//
+//
+//            }
+//        }
 
 
     }

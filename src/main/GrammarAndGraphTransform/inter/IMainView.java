@@ -7,7 +7,6 @@ package main.GrammarAndGraphTransform.inter;
 public interface IMainView {
     void initView();
     void initListener();
-
     void initData();
 
 }

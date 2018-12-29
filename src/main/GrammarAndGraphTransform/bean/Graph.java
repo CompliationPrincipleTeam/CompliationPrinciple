@@ -16,10 +16,15 @@ public class Graph implements IGraph {
 
     private List<Node> nodes;
 
+    public void addNode(Node node) {
+        nodes.add(node);
+    }
 
     public Graph() {
         edges = new ArrayList<>();
         nodes = new ArrayList<>();
+        Edge edge = new Edge(new Node("S0", NodeType.normalNode), new Node("S1"), "E");
+
     }
 
 
